@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey-form</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="header">
+        <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+        <p id="description" class="text-center">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </div>
+      <!-- main form -->
+      <form id="survey-form">
+        <!-- General info -->
+        <div class="form-wrapp">
+          <label for="name" id="name-label" class="general-info">Name </label>
+          <input class="input-field" type="text" id="name" required placeholder="Enter your name" />
+        </div>
+        <div class="form-wrapp">
+          <label for="email" id="email-label" class="general-info">Email </label>
+          <input
+            class="input-field"
+            type="email"
+            id="email"
+            required
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-wrapp">
+          <label for="age" id="number-label" class="general-info">Age (optional) </label>
+          <input class="input-field" type="number" id="age" placeholder="Age" min="13" max="99" />
+        </div>
+        <!-- role describe -->
+        <div class="form-wrapp">
+          <p>Which option best describes your current role?</p>
+          <select class="input-field" id="dropdown">
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="fulltime-job">Full Time Job</option>
+            <option value="fulltime-learn">Full Time Learner</option>
+            <option value="notsharing">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <!-- recommend -->
+        <div class="form-wrapp">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label for="definitely"
+            ><input
+              type="radio"
+              class="radio"
+              name="recommend"
+              id="definitely"
+              value="definitely"
+            />Definitely</label
+          >
+          <label for="maybe"
+            ><input
+              type="radio"
+              class="radio"
+              name="recommend"
+              id="maybe"
+              value="maybe"
+            />Maybe</label
+          >
+          <label for="notsure"
+            ><input type="radio" class="radio" name="recommend" id="notsure" value="notsure" />Not
+            sure</label
+          >
+        </div>
+        <!-- fav feature -->
+        <div class="form-wrapp">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select class="input-field" id="dropdown">
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open-source">Open source</option>
+          </select>
+        </div>
+        <!-- improve -->
+        <div class="form-wrapp">
+          <p>What would you like to see improved? (Check all that apply)</p>
+          <label for="fe-pro"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="fe-pro"
+              value="fe-pro"
+            />Front-end Projects</label
+          >
+          <label for="be-pro"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="be-pro"
+              value="be-pro"
+            />Back-end Projects</label
+          >
+          <label for="data_visualization"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="data_visualization"
+              value="data_visualization"
+            />Data Visualization</label
+          >
+          <label for="challenges"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="challenges"
+              value="challenges"
+            />Challenges</label
+          >
+          <label for="open_source_community"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="open_source_community"
+              value="open_source_community"
+            />Open Source Community</label
+          >
+          <label for="gitter_help_rooms"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="gitter_help_rooms"
+              value="gitter_help_rooms"
+            />Gitter help rooms</label
+          >
+          <label for="videos"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="videos"
+              value="videos"
+            />Videos</label
+          >
+          <label for="city_meetups"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="city_meetups"
+              value="city_meetups"
+            />City Meetups</label
+          >
+          <label for="wiki"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="wiki"
+              value="wiki"
+            />Wiki</label
+          >
+          <label for="forum"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="forum"
+              value="forum"
+            />Forum</label
+          >
+          <label for="additional_courses"
+            ><input
+              type="checkbox"
+              class="checkbox"
+              name="improve"
+              id="additional_courses"
+              value="additional_courses"
+            />Additional Courses</label
+          >
+        </div>
+        <!-- suggestion -->
+        <div class="form-wrapp">
+          <p>Any comments or suggestions?</p>
+          <textarea placeholder="Enter your comment here..." spellcheck="off"></textarea>
+        </div>
+        <!-- submit btn -->
+        <div class="form-wrapp">
+          <button id="submit" type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+/* config */
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 62.5%;
+}
+
+#app {
+  font-size: 1.6rem;
+}
+/* layout */
+body {
+  color: var(--color-white);
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#app {
+  width: 55vw;
+  margin: 3.125rem auto 0 auto;
+  font-weight: 400;
+}
+
+#app .text-center {
+  text-align: center;
+}
+
+.header h1,
+.header p {
+  margin-bottom: 8px;
+}
+
+#title {
+  font-weight: 400;
+}
+
+#description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 40%);
+  font-size: 1.8rem;
+}
+
+#app #survey-form {
+  margin-top: 30px;
+  background: var(--color-darkblue-alpha);
+  border-radius: 0.25rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.7rem;
+}
+
+#survey-form .form-wrapp {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapp label {
+  display: flex;
+  font-size: 1.7rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.form-wrapp p {
+  margin-bottom: 0.8rem;
+}
+
+.form-wrapp .general-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-wrapp .input-field {
+  width: 100%;
+  color: #495057;
+  padding: 6px 12px;
+  height: 3.9rem;
+  border-radius: 5px;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  border: 1px solid #ced4da;
+  transition: all 0.2s ease-in-out;
+  will-change: all;
+}
+
+.form-wrapp .input-field:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.form-wrapp .radio,
+.form-wrapp .checkbox {
+  display: inline-block;
+  margin-right: 1rem;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+.form-wrapp textarea {
+  padding: 5px 10px;
+  font-size: inherit;
+  font-family: inherit;
+  height: 120px;
+  margin-bottom: 14px;
+}
+/* submit btn */
+.form-wrapp #submit {
+  font-size: inherit;
+  font-family: inherit;
+  text-transform: capitalize;
+  background-color: #37af65;
+  color: inherit;
+  border: none;
+  border-radius: 2px;
+  height: 46px;
+  cursor: pointer;
+}
