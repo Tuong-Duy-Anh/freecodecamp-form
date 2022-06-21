@@ -22,8 +22,10 @@ body {
 }
 
 #app {
+
   font-size: 1.6rem;
 }
+
 /* layout */
 body {
   color: var(--color-white);
@@ -36,7 +38,7 @@ body {
 }
 
 #app {
-  width: 55vw;
+  width: 100%;
   margin: 3.125rem auto 0 auto;
   font-weight: 400;
 }
@@ -139,4 +141,18 @@ body {
   border-radius: 2px;
   height: 46px;
   cursor: pointer;
+}
+
+/* responsive */
+
+@media only screen and (min-width: 768px) {
+  #app {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width:767px) {
+  #app {
+    max-width: 540px;
+  }
 }
